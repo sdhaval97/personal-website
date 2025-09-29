@@ -49,7 +49,7 @@ const Hero = () => {
               <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight">
                 Hi, I'm{' '}
                 <span className="bg-gradient-to-r from-gray-300 to-white bg-clip-text text-transparent animate-shimmer">
-                  Your Name
+                  Dhaval
                 </span>
               </h1>
               <p className="text-xl lg:text-2xl text-gray-300 max-w-2xl">
