@@ -10,13 +10,23 @@ const Hero = () => {
         {/* Top Fold: Image on left, Intro on right */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16 lg:mb-24">
           {/* Left: Profile Photo */}
-          <div className="relative group w-80 h-80 mx-auto lg:mx-0 animate-fadeInUp">
-            <div className="rounded-2xl bg-gradient-to-br from-gray-700 to-gray-800 shadow-2xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:rotate-1">
+          <div className="relative group mx-auto lg:mx-0 animate-fadeInUp w-full max-w-sm sm:max-w-md md:max-w-xs xl:max-w-sm">
+            {/* Aspect ratio container for the image */}
+            <div className="relative pt-[100%] rounded-2xl bg-gradient-to-br from-gray-700 to-gray-800 shadow-2xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:rotate-1 mb-8"> {/* Added mb-8 here for spacing */}
+              {/* Actual image or placeholder */}
               <img
                 src={profileImage}
-                alt="Dhaval - Full Stack Developer"
-                className="w-full h-full object-cover"
+                alt="Dhaval"
+                className="absolute inset-0 w-full h-full object-cover"
               />
+              {/* If you prefer a placeholder, use this instead of the <img> tag */}
+              {/*
+              <div className="absolute inset-0 w-full h-full bg-gray-700 flex items-center justify-center">
+                <svg className="w-32 h-32 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
+                </svg>
+              </div>
+              */}
             </div>
           </div>
 
@@ -46,7 +56,7 @@ const Hero = () => {
         </div>
 
         {/* Bottom Fold: About on left, Skills on right */}
-        <div className="grid lg:grid-cols-2 gap-12 items-start mt-16">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left: Expanded About Me */}
           <div className="space-y-6 animate-fadeInUp" style={{ animationDelay: '200ms' }}>
             <h2 className="text-3xl font-bold text-white mb-4">About Me</h2>
@@ -56,21 +66,21 @@ const Hero = () => {
             <p className="text-gray-400 text-base leading-relaxed">
               My goal is to build software that is not only scalable and efficient but also provides a seamless user experience. I believe in the power of collaboration and am always eager to work with a team to bring ambitious projects to life.
             </p>
-            
+
             <div className="pt-4">
               <h3 className="text-xl font-semibold text-white mb-4">Core Competencies:</h3>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start">
                   <svg className="w-5 h-5 mr-3 mt-1 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                  <span>Full-Stack Development: Crafting responsive front-end interfaces with React and building robust, scalable back-end systems with Node.js and Python.</span>
+                  <span>**Full-Stack Development:** Crafting responsive front-end interfaces with React and building robust, scalable back-end systems with Node.js and Python.</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-5 h-5 mr-3 mt-1 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                  <span>Database Management: Designing and managing efficient SQL and NoSQL database schemas to ensure data integrity and performance.</span>
+                  <span>**Database Management:** Designing and managing efficient SQL and NoSQL database schemas to ensure data integrity and performance.</span>
                 </li>
                  <li className="flex items-start">
                   <svg className="w-5 h-5 mr-3 mt-1 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                  <span>Problem Solving: Deconstructing complex challenges into manageable components and implementing clean, maintainable solutions.</span>
+                  <span>**Problem Solving:** Deconstructing complex challenges into manageable components and implementing clean, maintainable solutions.</span>
                 </li>
               </ul>
             </div>
