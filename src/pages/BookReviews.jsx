@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 
 const BookReviews = () => {
   const [expandedBook, setExpandedBook] = useState(null)
+  const [selectedGenre, setSelectedGenre] = useState('all')
+
+  const genres = ['all', 'biography', 'history', 'technology', 'business', 'fiction', 'personal development']
 
   const books = [
     {
@@ -80,6 +83,12 @@ If you enjoyed The Chip War, you might also like:
     })
   }
 
+  const filteredBooks = selectedGenre === 'all'
+    ? books
+    : books.filter(book =>
+        book.categories?.some(cat => cat.toLowerCase() === selectedGenre.toLowerCase())
+      )
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -92,8 +101,25 @@ If you enjoyed The Chip War, you might also like:
           </p>
         </div>
 
+        {/* Genre Filter */}
+        <div className="flex flex-wrap justify-center gap-3 mb-12">
+          {genres.map((genre) => (
+            <button
+              key={genre}
+              onClick={() => setSelectedGenre(genre)}
+              className={`px-6 py-2 rounded-full capitalize text-sm font-medium transition-all duration-300 ${
+                selectedGenre === genre
+                  ? 'bg-white text-black hover:bg-gray-200'
+                  : 'bg-gray-800 text-gray-300 hover:bg-gray-700 border border-gray-700'
+              }`}
+            >
+              {genre}
+            </button>
+          ))}
+        </div>
+
         <div className="space-y-8">
-          {books.map((book, index) => {
+          {filteredBooks.map((book, index) => {
             const isExpanded = expandedBook === index
             return (
               <div
@@ -183,11 +209,11 @@ If you enjoyed The Chip War, you might also like:
         {/* Reading Stats */}
         <div className="mt-16 grid md:grid-cols-3 gap-6">
           <div className="bg-gray-800/30 backdrop-blur-sm rounded-xl p-6 text-center border border-gray-700">
-            <div className="text-3xl font-bold text-white mb-2">{books.length}</div>
-            <div className="text-gray-400">Books Read</div>
+            <div className="text-3xl font-bold text-white mb-2">{filteredBooks.length}</div>
+            <div className="text-gray-400">{selectedGenre === 'all' ? 'Books Read' : 'Books in Genre'}</div>
           </div>
           <div className="bg-gray-800/30 backdrop-blur-sm rounded-xl p-6 text-center border border-gray-700">
-            <div className="text-3xl font-bold text-white mb-2">{books.filter(b => b.rating > 0).length}</div>
+            <div className="text-3xl font-bold text-white mb-2">{filteredBooks.filter(b => b.rating > 0).length}</div>
             <div className="text-gray-400">Reviews Written</div>
           </div>
           <div className="bg-gray-800/30 backdrop-blur-sm rounded-xl p-6 text-center border border-gray-700">

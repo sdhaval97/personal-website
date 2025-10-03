@@ -72,15 +72,15 @@ const Hero = () => {
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start">
                   <svg className="w-5 h-5 mr-3 mt-1 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                  <span>**Full-Stack Development:** Crafting responsive front-end interfaces with React and building robust, scalable back-end systems with Node.js and Python.</span>
+                  <span><strong className="font-bold text-white">Full-Stack Development:</strong> Crafting responsive front-end interfaces with React and building robust, scalable back-end systems with Node.js and Python.</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-5 h-5 mr-3 mt-1 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                  <span>**Database Management:** Designing and managing efficient SQL and NoSQL database schemas to ensure data integrity and performance.</span>
+                  <span><strong className="font-bold text-white">Database Management:</strong> Designing and managing efficient SQL and NoSQL database schemas to ensure data integrity and performance.</span>
                 </li>
                  <li className="flex items-start">
                   <svg className="w-5 h-5 mr-3 mt-1 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                  <span>**Problem Solving:** Deconstructing complex challenges into manageable components and implementing clean, maintainable solutions.</span>
+                  <span><strong className="font-bold text-white">Problem Solving:</strong> Deconstructing complex challenges into manageable components and implementing clean, maintainable solutions.</span>
                 </li>
               </ul>
             </div>
