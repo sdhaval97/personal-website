@@ -4,9 +4,51 @@ const BookReviews = () => {
   const [expandedBook, setExpandedBook] = useState(null)
   const [selectedGenre, setSelectedGenre] = useState('all')
 
-  const genres = ['all', 'biography', 'history', 'technology', 'business', 'fiction', 'personal development']
+  const genres = ['all', 'biography', 'history', 'technology', 'business', 'fiction', 'philosophy', 'personal development']
 
   const books = [
+    {
+      title: "Ego is the Enemy",
+      author: "Ryan Holiday",
+      rating: 5,
+      shortReview: "Ryan Holiday's Ego is the Enemy is not just a book; it's a vital, timeless intervention for anyone striving for meaning and success. This masterfully crafted work argues that our biggest obstacle isn't the external world, but our own internal sense of self-importance.",
+      fullReview: `The Quiet Truth That Unlocks Greatness
+
+Ryan Holiday's Ego is the Enemy is not just a book; it's a vital, timeless intervention for anyone striving for meaning and success. This masterfully crafted work argues that our biggest obstacle isn't the external world, but our own internal sense of self-importance. Through a compelling tapestry of historical anecdotes and Stoic wisdom, Holiday methodically dismantles the myth that ego is a necessary fuel for ambition.
+
+**What Makes It Essential Reading**
+
+The book's primary strength lies in its clarity and structure. Holiday divides his argument into three logical parts—Aspire, Success, and Failure—showing how ego sabotages us at every stage of our journey. The prose is sharp, direct, and devoid of fluff, making profound philosophical concepts accessible and actionable.
+
+Instead of abstract preaching, Holiday uses powerful, real-world examples to illustrate his points. We learn from the humility of military leaders like George Marshall, the self-destructive pride of historical figures, and the disciplined focus of countless others who chose purpose over praise. This narrative approach makes the lessons stick, transforming the concept of "ego" from a vague idea into a tangible force we can identify and manage in our own lives. It's a book that doesn't just tell you what to do, but shows you why through the successes and failures of others.
+
+**Who Might Not Connect**
+
+While it's hard to find a genuine weakness in this book, readers looking for a quick-fix, step-by-step self-help guide might find its philosophical depth more demanding. Holiday offers wisdom and a framework for thinking, not a simple checklist. The power of the book comes from reflection and consistent application, which requires more effort than a typical "life hack" manual.
+
+**Themes and Deeper Analysis**
+
+The central theme is the fundamental conflict between ego and humility. Holiday posits that true confidence is quiet and demonstrated through work, whereas ego is loud, fragile, and requires constant validation. The book is a modern masterclass in Stoic philosophy, championing principles like self-awareness, rationality, and the importance of being a perpetual student. It forces you to ask uncomfortable but necessary questions about your motivations: Are you doing the work, or are you just trying to be seen doing the work?
+
+**Who Should Read This Book?**
+
+This book is essential reading for leaders, entrepreneurs, artists, athletes, and anyone ambitious. It's for the person just starting out, the one who has achieved success, and the one who has just faced a crushing failure. If you are interested in personal development, leadership, or philosophy, Ego is the Enemy should be at the top of your list.
+
+**Rating and Recommendation**
+
+Rating: ★★★★★ (5/5)
+
+Ego is the Enemy is a profound and practical guide to achieving a more meaningful and sustainable form of success. It's a book to be read, re-read, and absorbed. I wholeheartedly recommend it as a foundational text for anyone serious about personal and professional growth.
+
+**If You Liked This, You'll Also Enjoy...**
+
+- The Obstacle Is the Way by Ryan Holiday
+- Meditations by Marcus Aurelius
+- Man's Search for Meaning by Viktor E. Frankl`,
+      categories: ["Philosophy", "Personal Development"],
+      readDate: "2025",
+      coverImage: "/images/books/Ego_Is_The_Enemy_Cover.jpg"
+    },
     {
       title: "Chip War: The Fight for the World's Most Critical Technology",
       author: "Chris Miller",
