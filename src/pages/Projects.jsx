@@ -34,9 +34,12 @@ const Projects = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div
+            <a
               key={project.title}
-              className="group bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:scale-105 animate-fadeInUp"
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`group bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:scale-105 animate-fadeInUp ${project.link ? 'cursor-pointer' : ''}`}
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className={`h-48 bg-gradient-to-br ${project.bgColor} rounded-lg mb-4 flex items-center justify-center overflow-hidden`}>
@@ -69,20 +72,8 @@ const Projects = () => {
 
               <div className="flex justify-between items-center">
                 <span className="text-sm text-gray-500">{project.status}</span>
-                {project.link && (
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-white transition-colors duration-200"
-                  >
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clipRule="evenodd" />
-                    </svg>
-                  </a>
-                )}
               </div>
-            </div>
+            </a>
           ))}
 
           {/* Placeholder for more projects */}
