@@ -3,7 +3,7 @@ import React from 'react'
 const Projects = () => {
   const projects = [
     {
-      title: "Gomatie Copack",
+      title: "Gomati Ecopack",
       description: "A professional business website for a packaging company, featuring modern design and responsive layout",
       tech: ["React", "Tailwind CSS", "Vite"],
       status: "Live",
