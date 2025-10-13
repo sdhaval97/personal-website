@@ -8,7 +8,8 @@ const Projects = () => {
       tech: ["React", "Tailwind CSS", "Vite"],
       status: "Live",
       bgColor: "from-green-500 to-teal-600",
-      link: "https://www.gomatiecopack.com/"
+      link: "https://www.gomatiecopack.com/",
+      logo: "/images/projects/gomati_logo.png"
     },
     {
       title: "Personal Website",
@@ -38,10 +39,18 @@ const Projects = () => {
               className="group bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:scale-105 animate-fadeInUp"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className={`h-48 bg-gradient-to-br ${project.bgColor} rounded-lg mb-4 flex items-center justify-center`}>
-                <div className="text-white/80 text-lg font-semibold">
-                  {project.title}
-                </div>
+              <div className={`h-48 bg-gradient-to-br ${project.bgColor} rounded-lg mb-4 flex items-center justify-center overflow-hidden`}>
+                {project.logo ? (
+                  <img
+                    src={project.logo}
+                    alt={`${project.title} logo`}
+                    className="w-full h-full object-contain p-4"
+                  />
+                ) : (
+                  <div className="text-white/80 text-lg font-semibold">
+                    {project.title}
+                  </div>
+                )}
               </div>
 
               <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
