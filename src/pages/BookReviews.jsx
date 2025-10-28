@@ -46,7 +46,7 @@ Ego is the Enemy is a profound and practical guide to achieving a more meaningfu
 - Meditations by Marcus Aurelius
 - Man's Search for Meaning by Viktor E. Frankl`,
       categories: ["Philosophy", "Personal Development"],
-      readDate: "2025",
+      readDate: "2021",
       coverImage: "/images/books/Ego_Is_The_Enemy_Cover.jpg"
     },
     {
