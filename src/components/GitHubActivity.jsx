@@ -35,13 +35,13 @@ const GitHubActivity = () => {
     <div className="space-y-4 animate-fadeInUp">
       <h3 className="text-xl font-semibold text-white">GitHub Activity</h3>
 
-      <div className="bg-gray-900/50 rounded-xl p-6 backdrop-blur-sm border border-gray-700/50 text-gray-300">
+      <div className="bg-gray-900/50 rounded-xl p-6 backdrop-blur-sm border border-gray-700/50 text-gray-300 overflow-x-auto">
         <GitHubCalendar
           username="sdhaval97"
-          blockSize={12}
-          blockMargin={4}
+          blockSize={isMobile ? 8 : 12}
+          blockMargin={isMobile ? 2 : 4}
           theme={colorTheme}
-          fontSize={14}
+          fontSize={isMobile ? 12 : 14}
           transformData={selectMonths}
         />
         <div className="mt-4 flex justify-between items-center">
