@@ -16,7 +16,8 @@ const Projects = () => {
       description: "A modern, responsive portfolio website built with React and Tailwind CSS",
       tech: ["React", "Tailwind CSS", "Vite"],
       status: "In Development",
-      bgColor: "from-blue-500 to-purple-600"
+      bgColor: "from-blue-500 to-purple-600",
+      link: "https://personal-website-seven-chi-90.vercel.app/"
     }
   ]
 
