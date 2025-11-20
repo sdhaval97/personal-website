@@ -45,9 +45,12 @@ const Hero = () => {
               Building scalable web applications with modern technologies and clean, efficient code.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-8">
-              <button className="group relative px-8 py-4 bg-white text-black font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+              <a
+                href="/projects"
+                className="group relative px-8 py-4 bg-white text-black font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl text-center"
+              >
                 <span className="relative z-10">View My Work</span>
-              </button>
+              </a>
               <a
                 href="/Dhaval_Shah_CV.pdf"
                 download="Dhaval_Shah_CV.pdf"
