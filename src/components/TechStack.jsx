@@ -48,7 +48,7 @@ const TechStack = () => {
     <div className="space-y-4 animate-fadeInUp">
       <h3 className="text-xl font-semibold text-white">Tech Stack</h3>
 
-      <div className="flex gap-6 items-center justify-start">
+      <div className="flex flex-wrap gap-4 sm:gap-6 items-center justify-start">
         {technologies.map((tech, index) => (
           <div
             key={tech.name}
