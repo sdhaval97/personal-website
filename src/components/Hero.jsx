@@ -39,10 +39,10 @@ const Hero = () => {
               </span>
             </h1>
             <p className="text-xl lg:text-2xl text-gray-300 max-w-2xl mt-4">
-              Full Stack Developer & Problem Solver
+              Data & BI Analyst | Web Developer
             </p>
             <p className="text-lg text-gray-400 max-w-2xl mt-2">
-              Building scalable web applications with modern technologies and clean, efficient code.
+              Transforming data into actionable insights and building modern web applications with React.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-8">
               <a
@@ -68,10 +68,10 @@ const Hero = () => {
           <div className="space-y-6 animate-fadeInUp" style={{ animationDelay: '200ms' }}>
             <h2 className="text-3xl font-bold text-white mb-4">About Me</h2>
             <p className="text-gray-300 text-lg leading-relaxed">
-              I'm a passionate full-stack developer with expertise in modern web technologies. I love creating innovative solutions and turning ideas into beautiful, functional applications. With a strong foundation in both frontend and backend development, I thrive on solving complex problems and continuously learning new technologies.
+              I'm a Data & BI Analyst with a passion for uncovering insights from complex datasets and creating impactful visualizations. With extensive experience in data analysis, reporting, and business intelligence, I help organizations make data-driven decisions. I'm also expanding my skills in web development, building modern applications with React.
             </p>
             <p className="text-gray-400 text-base leading-relaxed">
-              My goal is to build software that is not only scalable and efficient but also provides a seamless user experience. I believe in the power of collaboration and am always eager to work with a team to bring ambitious projects to life.
+              My goal is to bridge the gap between data and technology, creating solutions that are both analytically sound and user-friendly. I believe in continuous learning and am always exploring new tools and technologies to enhance my skill set.
             </p>
 
             <div className="pt-4">
@@ -79,15 +79,15 @@ const Hero = () => {
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start">
                   <svg className="w-5 h-5 mr-3 mt-1 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                  <span><strong className="font-bold text-white">Full-Stack Development:</strong> Crafting responsive front-end interfaces with React and building robust, scalable back-end systems with Node.js and Python.</span>
+                  <span><strong className="font-bold text-white">Data Analysis & Business Intelligence:</strong> Extracting insights from complex datasets, creating interactive dashboards, and delivering actionable reports that drive business decisions.</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-5 h-5 mr-3 mt-1 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                  <span><strong className="font-bold text-white">Database Management:</strong> Designing and managing efficient SQL and NoSQL database schemas to ensure data integrity and performance.</span>
+                  <span><strong className="font-bold text-white">Data Visualization & Reporting:</strong> Designing compelling visualizations and reports using modern BI tools to communicate complex data stories effectively.</span>
                 </li>
                  <li className="flex items-start">
                   <svg className="w-5 h-5 mr-3 mt-1 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                  <span><strong className="font-bold text-white">Problem Solving:</strong> Deconstructing complex challenges into manageable components and implementing clean, maintainable solutions.</span>
+                  <span><strong className="font-bold text-white">Web Development:</strong> Building responsive and modern web applications using React, with a focus on clean code and user experience.</span>
                 </li>
               </ul>
             </div>
