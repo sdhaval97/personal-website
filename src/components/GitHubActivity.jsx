@@ -43,8 +43,9 @@ const GitHubActivity = () => {
           theme={colorTheme}
           fontSize={isMobile ? 12 : 14}
           transformData={selectMonths}
+          hideColorLegend
         />
-        <div className="mt-4 flex justify-between items-center">
+        <div className="mt-4 flex flex-col gap-2">
           <span className="text-gray-400 text-sm">Last {isMobile ? '3' : '6'} months of activity</span>
           <a
             href="https://github.com/sdhaval97"
