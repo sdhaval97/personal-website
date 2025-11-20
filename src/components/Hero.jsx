@@ -48,9 +48,13 @@ const Hero = () => {
               <button className="group relative px-8 py-4 bg-white text-black font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl">
                 <span className="relative z-10">View My Work</span>
               </button>
-              <button className="group relative px-8 py-4 border-2 border-gray-400 text-gray-300 font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:border-white hover:text-white">
+              <a
+                href="/Dhaval_Shah_CV.pdf"
+                download="Dhaval_Shah_CV.pdf"
+                className="group relative px-8 py-4 border-2 border-gray-400 text-gray-300 font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:border-white hover:text-white text-center"
+              >
                 <span className="relative z-10">Download CV</span>
-              </button>
+              </a>
             </div>
           </div>
         </div>
