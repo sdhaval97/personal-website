@@ -1,21 +1,33 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import GitHubCalendar from 'react-github-calendar'
 
 const GitHubActivity = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const colorTheme = {
     light: ['#161b22', '#0e4429', '#006d32', '#26a641', '#39d353'],
     dark: ['#161b22', '#0e4429', '#006d32', '#26a641', '#39d353'],
   };
 
-  const selectLastSixMonths = contributions => {
+  const selectMonths = contributions => {
     const today = new Date();
-    const sixMonthsAgo = new Date();
-    // Go back 6 months from today
-    sixMonthsAgo.setMonth(today.getMonth() - 6);
+    const monthsAgo = new Date();
+    // Show 3 months on mobile, 6 months on desktop
+    const monthsToShow = isMobile ? 3 : 6;
+    monthsAgo.setMonth(today.getMonth() - monthsToShow);
 
     return contributions.filter(day => {
       const date = new Date(day.date);
-      return date >= sixMonthsAgo && date <= today;
+      return date >= monthsAgo && date <= today;
     });
   };
 
@@ -30,10 +42,10 @@ const GitHubActivity = () => {
           blockMargin={4}
           theme={colorTheme}
           fontSize={14}
-          transformData={selectLastSixMonths}
+          transformData={selectMonths}
         />
         <div className="mt-4 flex justify-between items-center">
-          <span className="text-gray-400 text-sm">Last 6 months of activity</span>
+          <span className="text-gray-400 text-sm">Last {isMobile ? '3' : '6'} months of activity</span>
           <a
             href="https://github.com/sdhaval97"
             target="_blank"
